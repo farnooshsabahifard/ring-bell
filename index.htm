@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>ring</title>
+        <style>
+            .ringbell{
+                width: 400px;
+                height: 400px;
+                background: pink;
+                text-align: center;
+                position: relative;
+            }
+            .circlenumber{
+                background: green;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                position: absolute;
+                top:40px;
+                left: 230px;
+                border: 5px solid black;
+                z-index: 3;
+            }
+            .circlenumber span{
+                font-size: 40px;
+               display: block;
+               padding-top: 6px;
+            }
+            .ringbell img{
+                position: absolute;
+                top: 10px;
+                left: 60px;
+                animation-name: move;
+                animation-duration: 2S;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in;
+                /* animation-play-state:running; */
+                /* animation-fill-mode: forwards; */
+                /* animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+                
+            }
+            /* @keyframes ring {
+0% { -webkit-transform: rotateZ(0); }
+  1% { -webkit-transform: rotateZ(30deg); }
+  3% { -webkit-transform: rotateZ(-28deg); }
+  5% { -webkit-transform: rotateZ(34deg); }
+  7% { -webkit-transform: rotateZ(-32deg); }
+  9% { -webkit-transform: rotateZ(30deg); }
+  11% { -webkit-transform: rotateZ(-28deg); }
+  13% { -webkit-transform: rotateZ(26deg); }
+  15% { -webkit-transform: rotateZ(-24deg); }
+  17% { -webkit-transform: rotateZ(22deg); }
+  19% { -webkit-transform: rotateZ(-20deg); }
+  21% { -webkit-transform: rotateZ(18deg); }
+  23% { -webkit-transform: rotateZ(-16deg); }
+  25% { -webkit-transform: rotateZ(14deg); }
+  27% { -webkit-transform: rotateZ(-12deg); }
+  29% { -webkit-transform: rotateZ(10deg); }
+  31% { -webkit-transform: rotateZ(-8deg); }
+  33% { -webkit-transform: rotateZ(6deg); }
+  35% { -webkit-transform: rotateZ(-4deg); }
+  37% { -webkit-transform: rotateZ(2deg); }
+  39% { -webkit-transform: rotateZ(-1deg); }
+  41% { -webkit-transform: rotateZ(1deg); }
+
+  43% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(0); }
+}  */
+@keyframes move {
+    0%{
+        transform: rotate(0deg);
+    } 
+    25%{
+        transform: rotate(30deg);
+    }
+   
+    75%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    } 
+   
+    
+}
+
+
+                
+            
+        </style>
+    </head>
+    <body>
+        <div class="ringbell">
+            <div class="circlenumber"><span>5</span></div>
+            <img src="./bell-860.svg" alt="bell">
+        </div>
+    </body>
+</html>
